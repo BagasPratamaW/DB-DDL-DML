@@ -55,7 +55,14 @@ SELECT * FROM `siswa` ORDER BY tgl_lahir DESC;
 SELECT UPPER(alamat) FROM `siswa`;
 
 -- menampilkan beberapa field dengan kondisi tertentu
-SELECT nama_lengkap,tmp_lahir,tgl_lahir FROM `siswa` WHERE YEAR(tgl_lahir) = '2002';
+SELECT nama_lengkap,tmp_lahir,tgl_lahir FROM `siswa` WHERE tgl_lahir = '2002';
+
+-- menampilkan beberapa field dengan kondisi tahun kurang dari 2005 / dll ( <, >)
+
+SELECT nama_lengkap,tmp_lahir,tgl_lahir FROM `siswa` WHERE tgl_lahir < '2005';
+
+-- menampilkan filed yang berawalan dari suku kata 
+SELECT * FROM siswa WHERE nama_lengkap LIKE 'A%';
 
 -- Menampilkan data yang lahir tahun 2002
 SELECT * FROM `siswa` WHERE YEAR(tgl_lahir) = 2002
